@@ -1,0 +1,42 @@
+project:
+  type: website
+  resources: 
+    - "spec/index.html"
+    - "spec/css/*.*"
+    - "spec/js/*.*"
+
+website:
+  site-url: https://iqb-specifications.github.io/unit-metadata/
+  title: "Unit-Metadata"
+  favicon: favicon.ico
+  page-navigation: true
+  repo-url: https://iqb-specifications.github.io/unit-metadata/
+  repo-actions: []
+  navbar:
+    search: true
+    logo: iqb-logo-grey.png
+  page-footer:
+    background: light
+    right:
+      - text: "IQB 2026"
+        href: https://www.iqb.hu-berlin.de
+      - icon: github
+        href: https://github.com/iqb-specifications/unit-metadata
+    left:
+      - href: https://iqb-specifications.github.io
+        text: "{{< fa house >}}"
+  sidebar: 
+    style: "docked"
+    search: true
+    lang: de
+    collapse-level: 1
+
+format:
+  html:
+    theme:
+      - cyborg
+      - custom.scss
+    toc: true
+    anchor-sections: true
+    link-external-icon: true
+    link-external-newwindow: true
