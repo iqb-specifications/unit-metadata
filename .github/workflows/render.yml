@@ -34,6 +34,7 @@ jobs:
           npm run generate_docs
       - name: Push changes
         run: |
+          git add spec/**.*
           git commit -m "update gh-pages"
           git push -f
         env:
