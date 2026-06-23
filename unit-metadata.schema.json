@@ -1,0 +1,35 @@
+{
+  "$id": "unit-metadata@0.1",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Unit Metadata.",
+  "description": "Specification for metadata as part of the unit data.",
+  "type": "object",
+  "properties": {
+    "createdAt": {
+      "description": "Timestamp of creation",
+      "type": "string",
+      "examples": [
+        "2026-04-09T13:15:10.977Z"
+      ]
+    },
+    "changedAt": {
+      "description": "Timestamp of last change",
+      "type": "string",
+      "examples": [
+        "2026-04-09T13:15:10.977Z"
+      ]
+    },
+    "metadata": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/metadata"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "metadata": {
+      "$ref": "https://w3id.org/iqb/spec/metadata-values/3.0"
+    }
+  }
+}

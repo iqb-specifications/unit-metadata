@@ -1,0 +1,24 @@
+{
+  "name": "@iqbspecs/unit-metadata",
+  "author": "IQB - Institut zur Qualitätsentwicklung im Bildungswesen",
+  "license": "CC0-1.0",
+  "description": "Specification for metadata as part of the unit data.",
+  "scripts": {
+    "validate-schema": "test-schema test unit-metadata.schema.json",
+    "async_generate": "asyncapi generate fromTemplate asyncapi.yaml @asyncapi/html-template --use-new-generator --param singleFile=false --param config=asyncapi.config.json -o ./spec --force-write",
+    "generate_docs": "npm run async_generate && cat add.css >> ./spec/css/global.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iqb-specifications/unit-metadata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iqb-specifications/unit-metadata/issues"
+  },
+  "homepage": "https://github.com/iqb-specifications/unit-metadata#readme",
+  "devDependencies": {
+    "@iqbspecs/validate-json": "^0.4.0",
+    "@asyncapi/cli": "^4.1.1",
+    "@asyncapi/html-template": "^3.1.0"
+  }
+}
